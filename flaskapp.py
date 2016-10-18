@@ -1,8 +1,10 @@
-@app.route("./root")
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/root")
 def root():
     return "hello flask"
 
-@app.route("/greet/<name>")
+@app.route("/greet")
 def greet(name):
-	name  = raw_input("Please Enter Your Name:	")
 	return "Hello" + name
